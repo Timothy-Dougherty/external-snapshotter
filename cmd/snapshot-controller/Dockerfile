@@ -4,4 +4,6 @@ LABEL description="Snapshot Controller"
 ARG binary=./bin/snapshot-controller
 
 COPY ${binary} snapshot-controller
+RUN chmod +x csi-snapshotter
+
 ENTRYPOINT ["/snapshot-controller"]
